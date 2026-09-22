@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Reenie+Beanie&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #080705;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ================= CINEMA NAVBAR ================= */
+.cinema-nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.cinema-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cinema-links a {
+  text-decoration: none;
+  color: #8a8880;
+  font-size: 0.82rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.cinema-links a:hover {
+  color: #f59e0b;
+}
+
+.talk-btn {
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #f3f0e6;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.08);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.talk-btn:hover {
+  background: #f59e0b;
+  color: #080705;
+}
+
+/* ================= AURA HERO SECTION ================= */
+.aura-hero {
+  position: relative;
+  height: calc(100vh - 80px);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  overflow: hidden;
+}
+
+/* Center Golden Glow / Spotlight */
+.spotlight {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.22) 0%, rgba(234, 179, 8, 0.05) 50%, transparent 75%);
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ambient-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to top, #080705 30%, transparent 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* 3-Column Controlled Grid */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 0.75fr;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 6;
+}
+
+.hero-headline {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(3.2rem, 5.5vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: 1.5px;
+  color: #f3f0e6;
+  text-transform: uppercase;
+}
+
+.hero-headline span {
+  color: #eab308;
+  text-shadow: 0 0 35px rgba(234, 179, 8, 0.45);
+}
+
+.hero-roles {
+  margin-top: 1.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #a8a29e;
+  font-weight: 600;
+}
+
+.hero-tagline {
+  margin-top: 1rem;
+  color: #8a8880;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 440px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  padding: 0.85rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.primary-action {
+  background: #eab308;
+  color: #080705;
+}
+
+.primary-action:hover {
+  background: #ca8a04;
+  transform: translateY(-2px);
+}
+
+.secondary-action {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f3f0e6;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.secondary-action:hover {
+  border-color: #eab308;
+  color: #eab308;
+}
+
+/* CENTER COLUMN - STRICTLY RESTRICTED IMAGE */
+.hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+.character-wrapper {
+  height: 100%;
+  max-height: calc(100vh - 120px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.character-img {
+  max-height: 75vh;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+/* RIGHT COLUMN */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 55%;
+  padding-right: 1rem;
+  z-index: 6;
+}
+
+.craft-quote {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: #8a8880;
+  line-height: 1.7;
+  text-align: right;
+  font-weight: 500;
+}
+
+.signature-text {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 3.4rem;
+  color: #eab308;
+  text-align: right;
+  margin-top: -0.3rem;
+  transform: rotate(-6deg);
+}
+
+.badge-circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 1px dashed rgba(234, 179, 8, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(234, 179, 8, 0.04);
+}
+
+.badge-circle span {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #eab308;
+  line-height: 1;
+}
+
+.badge-circle p {
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  color: #8a8880;
+  margin-top: 4px;
+}

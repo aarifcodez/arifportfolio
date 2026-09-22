@@ -284,6 +284,89 @@ const Hero = () => {
           color: #8a8880;
           margin-top: 4px;
         }
+
+        @media (max-width: 768px) {
+  .aura-hero {
+    height: auto;
+    min-height: auto;
+    padding: 3rem 1.5rem 4rem 1.5rem;
+    overflow: visible;
+  }
+
+  .spotlight {
+    width: 300px;
+    height: 300px;
+    top: 50%;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-headline {
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  .hero-roles {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .action-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-center {
+    width: 100%;
+    order: 2;
+  }
+
+  .character-img {
+    height: 45vh;
+    max-height: 360px;
+  }
+
+  .hero-right {
+    height: auto;
+    align-items: center;
+    padding-right: 0;
+    order: 3;
+    gap: 1.5rem;
+  }
+
+  .craft-quote {
+    text-align: center;
+  }
+
+  .signature-text {
+    text-align: center;
+    transform: none;
+    font-size: 3rem;
+  }
+}
       `}</style>
     </section>
   );

@@ -80,6 +80,18 @@ const Navbar = () => {
           background: #f59e0b;
           color: #080705;
         }
+          @media (max-width: 768px) {
+  .cinema-nav {
+    padding: 1.2rem 1.5rem;
+  }
+  .cinema-links {
+    display: none; /* Mobile par clean look ke liye menu links hide ho jayenge */
+  }
+  .talk-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.72rem;
+  }
+}
       `}</style>
     </>
   );
